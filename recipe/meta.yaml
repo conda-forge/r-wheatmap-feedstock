@@ -13,7 +13,6 @@ source:
   sha256: fe37cefe41dcae15b82c813230e467bf5197fd4c174f3e5b1c7c9314fcdf3db0
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
   number: 1002
   noarch: generic
@@ -22,8 +21,6 @@ build:
     - lib/
 
 requirements:
-  build:
-
   host:
     - r-base
     - r-rcolorbrewer
@@ -40,7 +37,7 @@ test:
 
 about:
   home: https://github.com/zwdzwd/wheatmap
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Builds complex plots, heatmaps in particular, using natural semantics. Bigger plots
     can be assembled using directives such as 'LeftOf', 'RightOf', 'TopOf', and 'Beneath'
     and more. Other features include clustering, dendrograms and integration with 'ggplot2'
@@ -52,10 +49,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
-    - dpryan79
