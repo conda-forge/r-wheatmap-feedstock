@@ -1,11 +1,11 @@
-About r-wheatmap
-================
+About r-wheatmap-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-wheatmap-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/zwdzwd/wheatmap
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-wheatmap-feedstock/blob/main/LICENSE.txt)
 
 Summary: Builds complex plots, heatmaps in particular, using natural semantics. Bigger plots can be assembled using directives such as 'LeftOf', 'RightOf', 'TopOf', and 'Beneath' and more. Other features include clustering, dendrograms and integration with 'ggplot2' generated grid objects. This package is particularly designed for bioinformaticians to assemble complex plots for publication.
 
