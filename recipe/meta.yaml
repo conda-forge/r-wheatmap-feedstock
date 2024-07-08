@@ -1,6 +1,5 @@
 {% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-wheatmap
@@ -13,8 +12,7 @@ source:
   sha256: b76dff6f668874d08acb5f6d3849288645470ab2e3be34b6eabda065336d9118
 
 build:
-  merge_build_host: true  # [win]
-  number: 2
+  number: 3
   noarch: generic
   rpaths:
     - lib/R/lib/
