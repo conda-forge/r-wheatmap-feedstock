@@ -17,16 +17,27 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
+  build:
+    - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-rcolorbrewer
     - r-colorspace
+    - r-gtable
+    - r-pals
   run:
     - r-base
     - r-rcolorbrewer
     - r-colorspace
+    - r-gtable
+    - r-pals
 
 test:
   commands:
@@ -39,7 +50,8 @@ about:
   summary: Builds complex plots, heatmaps in particular, using natural semantics. Bigger plots can be assembled using directives such as 'LeftOf', 'RightOf', 'TopOf', and 'Beneath' and more. Other features include clustering, dendrograms and integration with 'ggplot2' generated grid objects. This package is 
     particularly designed for bioinformaticians to assemble complex plots for publication.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
